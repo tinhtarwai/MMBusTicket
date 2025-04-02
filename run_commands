@@ -1,0 +1,20 @@
+# HTML/ XML report
+> pip install pytest-html
+> pytest tests/unit_test/test_seat_selection.py --html=seat_selection_report.html --self-contained-html
+> pytest tests/unit_test/test_seat_selection.py --junitxml=seat_selection_report.xml
+
+# multiple file in single HTML report
+>pytest tests/unit_test/test_seat_selection.py tests/unit_tests/test_trip_search.py --html=seat_selection_report.html --self-contained-ht
+
+
+# Run multiple times
+> pip install pytest-repeat
+> pytest tests/unit_test/test_seat_selection.py::test_select_more_than_requested_seats --count=5 -s -v
+
+
+# List all discover test
+>pytest --collect-only -v
+
+
+# Run multiple test methods
+>pytest tests/unit_tests/test_trip_search.py::test_empty_source tests/unit_tests/test_trip_search.py::test_empty_destination tests/unit_tests/test_trip_search.py::test_invalid_input
