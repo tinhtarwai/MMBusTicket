@@ -1,0 +1,7 @@
+{
+  "tests/unit_tests/test_trip_search.py::test_search_with_valid_inputs[2025-March-5-myanmar]": true,
+  "tests/unit_tests/test_traveler_info.py::test_invalid_phono_no": true,
+  "tests/unit_tests/test_trip_search.py::test_search_with_valid_inputs[2025-April-1-foreigner]": true,
+  "tests/unit_tests/test_trip_search.py::test_choose_same_location": true,
+  "tests/unit_tests/test_trip_search.py::test_fail": true
+}

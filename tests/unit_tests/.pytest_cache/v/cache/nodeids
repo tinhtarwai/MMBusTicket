@@ -1,0 +1,8 @@
+[
+  "test_seat_selection.py::test_select_and_deselect_seat",
+  "test_seat_selection.py::test_select_available_seat",
+  "test_seat_selection.py::test_select_less_than_requested_seats",
+  "test_seat_selection.py::test_select_more_than_requested_seats",
+  "test_seat_selection.py::test_select_not_enough_seat",
+  "test_seat_selection.py::test_select_unavailable_seat"
+]
