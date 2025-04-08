@@ -34,3 +34,9 @@ valid_phone = "09979964737"
 invalid_phones = ["abcdefgsfs", "123abc", "123-@#@#$@#$", "0912345", "091234567890123"]
 invalid_email = "tinhtarwai"
 invalid_phone_msg = "Please match the requested format."
+
+# test data for payment page
+
+valid_promo = 'tdg2000'
+empty_promo_msg = 'Promo code is required.'
+invalid_promo_msg = 'The promo code is invalid.'

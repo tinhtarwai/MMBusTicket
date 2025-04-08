@@ -71,6 +71,6 @@ def test_different_phone_no(traveler_info_page, phone_no, should_be_valid):
         print(f"Test passed : ({phone_no}) is a valid phone number. ")
 
 
-def test_invalid_email(traveler_info_page):
-    """Test validation message for entering invalid email"""
-    pass
+# def test_invalid_email(traveler_info_page):
+#     """Test validation message for entering invalid email"""
+#     pass

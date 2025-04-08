@@ -1,4 +1,7 @@
 [
+  "tests/unit_tests/test_payment.py::test_apply_empty_promo",
+  "tests/unit_tests/test_payment.py::test_apply_invalid_promo",
+  "tests/unit_tests/test_payment.py::test_apply_valid_promo",
   "tests/unit_tests/test_seat_selection.py::test_select_and_deselect_seat",
   "tests/unit_tests/test_seat_selection.py::test_select_available_seat",
   "tests/unit_tests/test_seat_selection.py::test_select_less_than_requested_seats",
