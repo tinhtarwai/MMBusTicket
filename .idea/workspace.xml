@@ -6,17 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b7311bc2-8781-4e26-8a76-b0d2ce1f726f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking_flow.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking_flow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/payment_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/payment_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/seat_selection_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seat_selection_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/traveler_info_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/traveler_info_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/trip_result_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/trip_result_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/trip_search_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/trip_search_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit_tests/test_traveler_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit_tests/test_traveler_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit_tests/test_trip_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit_tests/test_trip_search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +21,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -81,7 +71,7 @@
     "Python tests.pytest for test_trip_result.test_time_different_for_duration.executor": "Run",
     "Python.clear_cache.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feature/branchtest",
     "last_opened_file_path": "C:/Users/A_R_T/PycharmProjects/PythonProject",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
