@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7311bc2-8781-4e26-8a76-b0d2ce1f726f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/payment_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_tests/test_payment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking_flow.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking_flow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/payment_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/payment_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/seat_selection_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seat_selection_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/traveler_info_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/traveler_info_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/trip_result_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/trip_result_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/trip_search_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/trip_search_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/unit_tests/test_traveler_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit_tests/test_traveler_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit_tests/test_trip_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit_tests/test_trip_search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,79 +41,92 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for test_seat_selection.test_select_available_seat.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_seat_selection.test_select_less_than_requested_seats.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_seat_selection.test_select_more_than_requested_seats.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_seat_selection.test_select_unavailable_seat.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_traveler_info.test_different_phone_no.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_traveler_info.test_empty_fields.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_traveler_info.test_invalid_phono_no.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_result.test_check_locations_are_same.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_result.test_compare_trip_count_with_display.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_result.test_seat_count.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_result.test_ticket_amount_check.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_result.test_time_different_for_duration.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_search.test_choose_same_location.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_search.test_empty_departure_date.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_search.test_empty_destination.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_search.test_empty_fields.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_search.test_empty_source.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_search.test_fail.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_search.test_invalid_input.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_search.test_invalid_inputs.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_search.test_max_seat_count.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_search.test_min_seat_count.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_search.test_not_choosing_nationality.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_search.test_search_with_valid_inputs.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_trip_search.test_seat_selection_count.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_seat_selection.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_traveler_info.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_trip_result.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_trip_search.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_payment.test_apply_empty_promo.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_payment.test_apply_invalid_promo.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test_payment.test_apply_valid_promo.executor&quot;: &quot;Run&quot;,
-    &quot;Python.clear_cache.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/A_R_T/PycharmProjects/PythonProject&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_seat_selection.test_select_available_seat.executor": "Run",
+    "Python tests.Python tests for test_seat_selection.test_select_less_than_requested_seats.executor": "Run",
+    "Python tests.Python tests for test_seat_selection.test_select_more_than_requested_seats.executor": "Run",
+    "Python tests.Python tests for test_seat_selection.test_select_unavailable_seat.executor": "Run",
+    "Python tests.Python tests for test_traveler_info.test_different_phone_no.executor": "Run",
+    "Python tests.Python tests for test_traveler_info.test_empty_fields.executor": "Run",
+    "Python tests.Python tests for test_traveler_info.test_invalid_phono_no.executor": "Run",
+    "Python tests.Python tests for test_trip_result.test_check_locations_are_same.executor": "Run",
+    "Python tests.Python tests for test_trip_result.test_compare_trip_count_with_display.executor": "Run",
+    "Python tests.Python tests for test_trip_result.test_seat_count.executor": "Run",
+    "Python tests.Python tests for test_trip_result.test_ticket_amount_check.executor": "Run",
+    "Python tests.Python tests for test_trip_result.test_time_different_for_duration.executor": "Run",
+    "Python tests.Python tests for test_trip_search.test_choose_same_location.executor": "Run",
+    "Python tests.Python tests for test_trip_search.test_empty_departure_date.executor": "Run",
+    "Python tests.Python tests for test_trip_search.test_empty_destination.executor": "Run",
+    "Python tests.Python tests for test_trip_search.test_empty_fields.executor": "Run",
+    "Python tests.Python tests for test_trip_search.test_empty_source.executor": "Run",
+    "Python tests.Python tests for test_trip_search.test_fail.executor": "Run",
+    "Python tests.Python tests for test_trip_search.test_invalid_input.executor": "Run",
+    "Python tests.Python tests for test_trip_search.test_invalid_inputs.executor": "Run",
+    "Python tests.Python tests for test_trip_search.test_max_seat_count.executor": "Run",
+    "Python tests.Python tests for test_trip_search.test_min_seat_count.executor": "Run",
+    "Python tests.Python tests for test_trip_search.test_not_choosing_nationality.executor": "Run",
+    "Python tests.Python tests for test_trip_search.test_search_with_valid_inputs.executor": "Run",
+    "Python tests.Python tests for test_trip_search.test_seat_selection_count.executor": "Run",
+    "Python tests.Python tests in test_seat_selection.py.executor": "Run",
+    "Python tests.Python tests in test_traveler_info.py.executor": "Run",
+    "Python tests.Python tests in test_trip_result.py.executor": "Run",
+    "Python tests.Python tests in test_trip_search.py.executor": "Run",
+    "Python tests.pytest for test_booking_flow.test_booking_flow.executor": "Run",
+    "Python tests.pytest for test_payment.test_apply_empty_promo.executor": "Run",
+    "Python tests.pytest for test_payment.test_apply_invalid_promo.executor": "Run",
+    "Python tests.pytest for test_payment.test_apply_valid_promo.executor": "Run",
+    "Python tests.pytest for test_traveler_info.test_valid_inputs.executor": "Run",
+    "Python tests.pytest for test_trip_result.test_seat_count.executor": "Run",
+    "Python tests.pytest for test_trip_result.test_time_different_for_duration.executor": "Run",
+    "Python.clear_cache.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/A_R_T/PycharmProjects/PythonProject",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
-  <component name="RunManager" selected="Python tests.pytest for test_payment.test_apply_valid_promo">
-    <configuration name="Python tests for test_trip_search.test_fail" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+}]]></component>
+  <component name="RunManager" selected="Python tests.pytest for test_booking_flow.test_booking_flow">
+    <configuration name="clear_cache" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clear_cache.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_booking_flow.test_booking_flow" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/unit_tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_trip_search.test_fail&quot;" />
+      <option name="_new_target" value="&quot;test_booking_flow.test_booking_flow&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_trip_search.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="PythonProject" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/unit_tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/unit_tests/test_trip_search.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_payment.test_apply_empty_promo" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_traveler_info.test_valid_inputs" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,11 +139,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_payment.test_apply_empty_promo&quot;" />
+      <option name="_new_target" value="&quot;test_traveler_info.test_valid_inputs&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_payment.test_apply_invalid_promo" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_trip_result.test_seat_count" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,11 +156,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_payment.test_apply_invalid_promo&quot;" />
+      <option name="_new_target" value="&quot;test_trip_result.test_seat_count&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_payment.test_apply_valid_promo" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_trip_result.test_time_different_for_duration" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -154,24 +173,24 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_payment.test_apply_valid_promo&quot;" />
+      <option name="_new_target" value="&quot;test_trip_result.test_time_different_for_duration&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.pytest for test_payment.test_apply_empty_promo" />
-      <item itemvalue="Python tests.pytest for test_payment.test_apply_invalid_promo" />
-      <item itemvalue="Python tests.pytest for test_payment.test_apply_valid_promo" />
-      <item itemvalue="Python tests.Python tests for test_trip_search.test_fail" />
-      <item itemvalue="Python tests.Python tests in test_trip_search.py" />
+      <item itemvalue="Python.clear_cache" />
+      <item itemvalue="Python tests.pytest for test_traveler_info.test_valid_inputs" />
+      <item itemvalue="Python tests.pytest for test_trip_result.test_seat_count" />
+      <item itemvalue="Python tests.pytest for test_booking_flow.test_booking_flow" />
+      <item itemvalue="Python tests.pytest for test_trip_result.test_time_different_for_duration" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_payment.test_apply_valid_promo" />
-        <item itemvalue="Python tests.pytest for test_payment.test_apply_invalid_promo" />
-        <item itemvalue="Python tests.pytest for test_payment.test_apply_empty_promo" />
-        <item itemvalue="Python tests.Python tests in test_trip_search.py" />
-        <item itemvalue="Python tests.Python tests for test_trip_search.test_fail" />
+        <item itemvalue="Python tests.pytest for test_booking_flow.test_booking_flow" />
+        <item itemvalue="Python.clear_cache" />
+        <item itemvalue="Python tests.pytest for test_traveler_info.test_valid_inputs" />
+        <item itemvalue="Python tests.pytest for test_trip_result.test_seat_count" />
+        <item itemvalue="Python tests.pytest for test_trip_result.test_time_different_for_duration" />
       </list>
     </recent_temporary>
   </component>
@@ -192,5 +211,21 @@
       <updated>1739438525748</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/unit_tests/test_traveler_info.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_booking_flow.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

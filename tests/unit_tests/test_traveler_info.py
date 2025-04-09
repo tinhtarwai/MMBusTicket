@@ -71,6 +71,23 @@ def test_different_phone_no(traveler_info_page, phone_no, should_be_valid):
         print(f"Test passed : ({phone_no}) is a valid phone number. ")
 
 
+def test_valid_inputs(traveler_info_page):
+    """Test with valid traveler information"""
+    for key, value in data.traveler_info.items():
+        locator = traveler_info_page.get_input_field_locator(key)
+        if locator:
+            traveler_info_page.fill_info(locator, value)
+        else:
+            print(f"No locator found for {key}.")
+
+    traveler_info_page.get_random_gender(traveler_info_page.gender)
+    traveler_info_page.click_element(traveler_info_page.continue_btn)
+
+    next_ele = traveler_info_page.get_element(traveler_info_page.next_page_ele)
+    assert next_ele is True, f"Expected result : The system should redirect to next page."
+    print(f"Test passed : The system successfully redirect to payment page with valid information.\n")
+
+
 # def test_invalid_email(traveler_info_page):
 #     """Test validation message for entering invalid email"""
 #     pass

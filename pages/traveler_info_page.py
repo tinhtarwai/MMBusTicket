@@ -16,6 +16,22 @@ class TravelerInfoPage:
     continue_btn = (By.XPATH, "//button[@id='traveller-info-submit-button']")
     next_page_ele = (By.XPATH, "//ol[@class='steps']")
 
+    input_fields = {
+        "name": traveler_name,
+        "phone": phone_number,
+        "email": email
+    }
+
+    def get_input_field_locator(self, field_name):
+        return self.input_fields.get(field_name)
+
+    def fill_info(self, locator, value):
+        field = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located(locator)
+        )
+        field.clear()
+        field.send_keys(value)
+
     def click_element(self, click_element):
         by, value = click_element
         ele = WebDriverWait(self.driver, 10).until(

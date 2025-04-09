@@ -44,20 +44,35 @@ class TripSearchPage:
 
     def select_location(self, location, dropdown_locator):
         by, value = dropdown_locator
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable((by, value))
+        )
         dropdown = Select(self.driver.find_element(by, value))
         dropdown.select_by_visible_text(location)
 
     def enter_location(self, location, dropdown_locator, search_field):
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(dropdown_locator)
+        )
         self.driver.find_element(*dropdown_locator).click()
+        WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located(search_field)
+        )
         self.driver.find_element(*search_field).send_keys(location)
 
     def get_location_empty_result(self,empty_result_location):
         by, value = empty_result_location
-        return self.driver.find_element(by, value).text
+        res = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located((by, value))
+        )
+        return res.text
 
     def get_location_text(self, dropdown_locator):
         by, value = dropdown_locator
-        return self.driver.find_element(by, value).text
+        loc_text = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located((by, value))
+        )
+        return loc_text.text
 
     def get_element_disabled(self, locator):
         try:
@@ -71,21 +86,6 @@ class TripSearchPage:
             return False  # Element not found or not disabled
 
     def get_disabled_location_text(self, disabled_location):
-        # disabled_loc = WebDriverWait(self.driver, 10).until(
-        #     EC.presence_of_all_elements_located(disabled_location)
-        # )
-        # disabled_element = None
-        # for dis in disabled_loc:
-        #     if dis.get_attribute("disabled") in ["disabled", "true"]:
-        #         disabled_element = dis
-        #         break  # Stop looping after finding the first matching element
-        #
-        # if disabled_element:
-        #     disabled_text = disabled_element.text.strip()
-        #     return disabled_text if disabled_text else "No visible text found"
-        # else:
-        #     print("No disabled element found.")
-
         disabled_loc = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located(disabled_location)
         )
@@ -126,7 +126,6 @@ class TripSearchPage:
             month_year_element = WebDriverWait(self.driver, 5).until(
                 EC.visibility_of_element_located(self.month_year))
             mon_yr = month_year_element.text.strip()
-            print("Current month-year label:", mon_yr)
             if mon_yr.lower().strip() == f"{month} {year}".lower().strip():
                 break
 
@@ -145,14 +144,13 @@ class TripSearchPage:
                 if "calendar-cell-disabled" in day.get_attribute("class"):
                     print(f"Error : {day_text} is disabled and cannot be selected. ")
 
-                print(f"Clicking on: {day_text}")  # Debugging
                 self.driver.execute_script("arguments[0].scrollIntoView();", day)
                 time.sleep(0.5)  # Ensure the UI settles
                 self.driver.execute_script("arguments[0].click();", day)
                 break
 
         chosen_date = wait.until(EC.presence_of_element_located(self.date_display)).text
-        print("Final chosen date:", chosen_date)
+
 
     def click_element(self, click_element):
         by, value = click_element
@@ -206,5 +204,5 @@ class TripSearchPage:
         wait = WebDriverWait(self.driver, 5)  # Wait up to 10 seconds
         text1 = wait.until(EC.visibility_of_element_located(self.empty_res_text1)).text
         text2 = wait.until(EC.visibility_of_element_located(self.empty_res_text2)).text
-        print(text1, text2)
+        # print(text1, text2)
         return text1, text2

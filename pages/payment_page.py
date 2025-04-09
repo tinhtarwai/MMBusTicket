@@ -1,4 +1,5 @@
 import random
+import time
 
 from selenium.common import TimeoutException
 from selenium.webdriver.common.by import By
@@ -19,6 +20,13 @@ class PaymentPage:
     discount_amt = (By.XPATH, "//div[@class='d-flex align-items-center ']/following-sibling::div")
     total = (By.XPATH, "//div[contains(text(), 'Total')]/following-sibling::div")
     validation_msg = (By.XPATH, "//small[@class='ms-2 ml-2 mt-2 text-danger']")
+    mock_pay = (By.XPATH, "//div[normalize-space()='Mock Pay']")
+    pin_box = (By.XPATH, "//input[@name='meaningOfLife']")
+    pay_btn = (By.XPATH, "//button[normalize-space()='Pay Now']")
+    proceed_to_pay_btn = (By.XPATH, "//a[normalize-space()='Proceed To Pay']")
+    merchant_btn = (By.XPATH, "//a[normalize-space()='Return to Merchant']")
+    confirm_page_ele = (By.XPATH, "//span[@class='success-text']")
+
 
     def enter_promo(self, promo_code, promo_field):
         by, value = promo_field
@@ -69,9 +77,11 @@ class PaymentPage:
             EC.presence_of_element_located((by, value))
         )
         try:
+            self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
+            time.sleep(0.5)
             element.click()
         except:
-            self.driver.execute_script("argument[0].click();", element)
+            self.driver.execute_script("arguments[0].click();", element)
 
     def get_random_payment(self):
         by, value = self.payment_list
@@ -81,15 +91,58 @@ class PaymentPage:
         selected_payment = random.choice(payment_list)
         selected_payment.click()
 
+    def choose_mock_pay(self):
+        by, value = self.mock_pay
+        try:
+            mock = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((by, value))
+            )
+            if mock.is_displayed():
+                mock.click()
+            else:
+                print("\nElement is not displayed.")
+        except Exception as e:
+            print(f"An error occurred: {e}")
 
-    # def get_validation_message(self, field):
-    #     by, value = field
-    #     element = self.driver.find_element(by, value)
-    #
-    #     WebDriverWait(self.driver, 10).until(
-    #         lambda driver: driver.execute_script("return[0].validationMessage;", element) != ""
-    #     )
-    #     return self.driver.execute_script("return argument[0].validationMessage;", element)
+    def mock_payment(self, pin):
+        try:
+            pin_box = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located(self.pin_box)
+            )
+            pin_box.send_keys(pin)
+            time.sleep(2)
+            pay_now = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located(self.pay_btn)
+            )
+            if pay_now.is_displayed():
+                pay_now.click()
+            else:
+                print("Pay Now button not found")
+        except Exception as e:
+            print(f"An error occurred: {e}")
+
+    def redirect_to_complete(self):
+        try:
+            return_to_mer = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located(self.merchant_btn)
+            )
+            if return_to_mer.is_displayed():
+                return_to_mer.click()
+            else:
+                print("Pay Now button not found")
+        except Exception as e:
+            print(f"An error occurred while redirecting to merchant page")
+
+        # redirect to booking complete page
+        try:
+            confirm_ele = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located(self.confirm_page_ele)
+            )
+            print("Your Booking process is successful and confirmed.")
+            return confirm_ele
+        except Exception as e:
+            print(f"An error occurred while redirecting to booking complete page.")
+
 
     def get_validation_message(self):
         by, value = self.validation_msg

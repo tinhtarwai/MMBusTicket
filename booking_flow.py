@@ -104,6 +104,8 @@
 # driver.find_element(By.XPATH, "//button[@id='traveller-info-submit-button']").click()
 # print("\n\t** Traveler Info section is working fine")
 # time.sleep(2)
+
+
 # # select Mock Pay from payment list
 # try:
 #     mock_pay = WebDriverWait(driver, 10).until(
@@ -156,6 +158,8 @@
 # driver.find_element(By.XPATH, "//button[normalize-space()='Pay Now']").click()
 # print("\n\t** Payment process is working fine")
 #
+
+
 # # redirect to merchant page
 # try:
 #     return_to_mer = WebDriverWait(driver, 10).until(

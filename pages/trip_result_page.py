@@ -10,6 +10,8 @@ class TripResultPage:
     def __init__(self, driver):
         self.driver = driver
 
+    page_load_ele = (By.XPATH, "//form[@class='form  trip-search-form-wide  ']")
+    next_page_element = (By.XPATH, "//div[@class='section section-bg']")
     trip_count_display = (By.XPATH, "//div[@class='trip-searched-description'][2]")
     trip_result = (By.XPATH, "//div[@class='mb-3 trip-result']")
     filter_trip_result = (By.XPATH, "//div[@class='mb-3 trip-result' and @style!='display: none;']")
@@ -29,6 +31,30 @@ class TripResultPage:
     destination_dropdown_text = (By.XPATH, "//span[@title='To']//span[@class='text-dark']")
     display_source = (By.XPATH, "//div[@class='itinerary itinerary-sm mt-2']//small[@class='waypoint-name text-body-sm'][1]")
     display_destination = (By.XPATH, "//div[@class='itinerary itinerary-sm mt-2']//small[@class='waypoint-name text-body-sm'][2]")
+    select_btn = (By.XPATH, "//a[@class='btn btn-primary mt-2']")
+
+    def wait_for_url_to_change(self, old_url):
+        # Wait for the URL to change after the search form is submitted
+        WebDriverWait(self.driver, 10).until(
+            lambda driver: driver.current_url != old_url
+        )
+
+    # Add a method to wait for page to load (you can adjust the locator as needed)
+    def wait_for_page_to_load(self):
+        WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located(self.page_load_ele)
+        )
+
+    # Add a method to check if the page is loaded
+    def is_page_loaded(self):
+        try:
+            WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located(self.page_load_ele)
+            )
+            return True
+        except:
+            return False
+
 
     def get_trip_count(self, count_display):
         by, value = count_display
@@ -45,6 +71,11 @@ class TripResultPage:
         wait = WebDriverWait(self.driver, 10)
         result_list = wait.until(EC.presence_of_all_elements_located((by, value)))
         return len(result_list), result_list
+
+    def get_random_trip(self, list):
+        random_trip = random.choice(list)
+        select_button = random_trip.find_element(*self.select_btn)
+        select_button.click()
 
     def random_seat_number(self, min_seat, max_seat):
         random_no = random.randint(min_seat,max_seat)
@@ -93,9 +124,16 @@ class TripResultPage:
 
     def get_data(self, search_data):
         by, value = search_data
-        display_data = self.driver.find_element(by, value).text
-        return display_data
-
+        display_data = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((by, value))
+        )
+        return display_data.text
+    def  get_element(self, element):
+        by, value = element
+        ele = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((by, value))
+        )
+        return ele
 
     def get_depart_arrival_time(self, time):
         by, value = time

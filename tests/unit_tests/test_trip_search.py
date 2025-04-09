@@ -123,11 +123,11 @@ def test_search_with_valid_inputs(trip_search_page, year, month, date, nationali
     # if there are trips result for search criteria
     try:
         trip_count = trip_search_page.get_count(trip_search_page.trip_count_display)
-        print(f"{trip_count} trip(s) matched your search criteria. Test passed.\n")
+        print(f"Test Passed : {trip_count} trip(s) matched your search criteria. Test passed.\n")
 
     # if there is no result for search criteria
     except Exception as e:
-        print("There is no result matched with your search criteria.")
+        print(f"Test Passed : There is no result matched with your search criteria.")
         try:
             res_text1, res_text2 = trip_search_page.get_empty_result_texts()
             assert res_text1 == data.trip_res_text1 and res_text2 == data.trip_res_text2, f"Result message is different from specification./ {e}"

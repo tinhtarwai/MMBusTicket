@@ -1,6 +1,7 @@
 import os
 
 import pytest
+from urllib3 import request
 
 from pages.traveler_info_page import TravelerInfoPage
 from utils.webdriver_setup import get_driver, open_url
@@ -16,8 +17,9 @@ def driver():
     driver.quit()
 
 @pytest.fixture
-def seat_page(driver):
-    open_url(driver, "https://super-agent-webapp-dev.herokuapp.com/main/trip/3-278253-49-0-4?isForeigner=false&numSeats=4&integrity=95F5B9101C1EE3BC4537BEDE2320BDF22F62C289047500AC270E7333201DC02B")
+def seat_page(driver, request):
+    if "full_flow" not in request.keywords:
+        open_url(driver, "https://super-agent-webapp-dev.herokuapp.com/main/trip/3-278253-49-0-4?isForeigner=false&numSeats=4&integrity=95F5B9101C1EE3BC4537BEDE2320BDF22F62C289047500AC270E7333201DC02B")
     return SeatSelectionPage(driver)
 
 @pytest.fixture
@@ -26,18 +28,21 @@ def trip_search_page(driver):
     return TripSearchPage(driver)
 
 @pytest.fixture
-def trip_result_page(driver):
-    open_url(driver, "https://super-agent-webapp-dev.herokuapp.com/main/search?sourceId=Yangon&destinationId=Kyauk+Padaung&departureDate=2025-04-12&numberOfSeats=1&isForeigner=false")
+def trip_result_page(driver, request):
+    if "full_flow" not in request.keywords:
+        open_url(driver, "https://super-agent-webapp-dev.herokuapp.com/main/search?sourceId=Yangon&destinationId=Kyauk+Padaung&departureDate=2025-04-12&numberOfSeats=1&isForeigner=false")
     return TripResultPage(driver)
 
 @pytest.fixture
-def traveler_info_page(driver):
-    open_url(driver, "https://super-agent-webapp-dev.herokuapp.com/main/traveller/1124?integrity=F263B11B1B3FD9E891CCA324E2D70517B884E83DBF5C283D00079788FD039ECE")
+def traveler_info_page(driver, request):
+    if "full_flow" not in request.keywords:
+        open_url(driver, "https://super-agent-webapp-dev.herokuapp.com/main/traveller/1124?integrity=F263B11B1B3FD9E891CCA324E2D70517B884E83DBF5C283D00079788FD039ECE")
     return TravelerInfoPage(driver)
 
 @pytest.fixture
-def payment_page(driver):
-    open_url(driver, "https://super-agent-webapp-dev.herokuapp.com/main/review/urn:tentative-booking:7078?integrity=F68D71D38951C26DA0A696A4320C5969C49A8485C19F595F47B9D5FA8FA47F88")
+def payment_page(driver, request):
+    if "full_flow" not in request.keywords:
+        open_url(driver, "https://super-agent-webapp-dev.herokuapp.com/main/review/urn:tentative-booking:7078?integrity=F68D71D38951C26DA0A696A4320C5969C49A8485C19F595F47B9D5FA8FA47F88")
     return PaymentPage(driver)
 
 

@@ -10,6 +10,7 @@ class SeatSelectionPage:
     available_seats = (By.XPATH,"(//table//tbody//tr/td//a[@class='seat seat-available'])")
     all_seats = (By.XPATH, "(//table[@id='seat-table'])//td//a")
     proceed_btn = (By.XPATH, "//div[@class='card-body border-top']//button[@type='button']")
+    proceed_btn1 = (By.XPATH, "//button[contains(., 'Continue to Traveller Info')]")
 
     def get_available_seats(self):
         return self.driver.find_elements(*self.available_seats)
@@ -27,9 +28,24 @@ class SeatSelectionPage:
 
     def click_proceed_button(self):
         try:
-            proceed_button = WebDriverWait(self.driver, 10).until(
-                EC.element_to_be_clickable(self.proceed_btn)
-            )
-            proceed_button.click()
+            # proceed_button = WebDriverWait(self.driver, 10).until(
+            #     EC.visibility_of_element_located(self.proceed_btn1)
+            # )
+            #
+            # self.driver.execute_script("arguments[0].scrollIntoView(true);", proceed_button)
+            #
+            # proceed_button.click()
+
+            buttons = self.driver.find_elements(*self.proceed_btn1)
+            visible_buttons = [btn for btn in buttons if btn.is_displayed()]
+
+            if not visible_buttons:
+                raise Exception("No visible 'Continue to Traveller Info' button found.")
+            elif len(visible_buttons) > 1:
+                print("⚠️ Multiple visible buttons found. Clicking the first one.")
+
+            visible_buttons[0].click()
+
         except Exception as e:
+            print("Full error:", str(e))
             raise RuntimeError(f"Failed to click the Proceed button: {e}")
